@@ -1,0 +1,8 @@
+\section{Conclusions}
+
+In this paper, we introduced a novel graph sampling algorithm that leverages feature homophily to efficiently preserve the structural properties of large graphs. 
+%By minimizing the trace of the feature correlation matrix, our method preserves the graph rank, which is crucial for maintaining GNN expressivity in homophilic graphs. With its lower computational complexity compared to spectral methods, our algorithm offers a more practical solution for GNN training on large-scale networks. 
+Compared with random sampling, our proposed sampling heuristic is not only more effective in preserving the trace/rank of the graph, but also achieves superior performance when it is used to sample graphs for GNNs trained via transferability. These empirical results indicate the strong potential of our heuristic. Future work will focus on larger graph datasets such as ogbn-mag, where efficient training on subgraphs is even more pressing.
+%Experimental results on citation networks demonstrate that our approach outperforms random sampling in both trace preservation and transferability performance. Future work may explore extending this method to other graph types and further refining its theoretical guarantees.
+
+

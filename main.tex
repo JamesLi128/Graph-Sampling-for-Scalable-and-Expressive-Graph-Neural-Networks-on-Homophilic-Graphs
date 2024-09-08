@@ -1,0 +1,142 @@
+% Template for ICASSP-2024 paper; to be used with:
+%          spconf.sty  - ICASSP/ICIP LaTeX style file, and
+%          IEEEbib.bst - IEEE bibliography style file.
+% --------------------------------------------------------------------------
+\documentclass[conference]{IEEEtran}
+%\usepackage{spconf,
+\usepackage{amsmath,graphicx}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{comment}
+\usepackage{hyperref}
+% Example definitions.
+% --------------------
+\def\x{{\mathbf x}}
+\def\L{{\cal L}}
+\usepackage{xcolor}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{amsthm}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{my_symbol}
+\usepackage{amssymb}
+\newtheorem{theorem}{Theorem}[section] % Theorem environment
+\newtheorem{lemma}[theorem]{Lemma} % Lemma environment
+\newtheorem{proposition}[theorem]{Proposition} % Proposition environment
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition} % Definition environment
+\newtheorem{example}[theorem]{Example} % Example environment
+\newtheorem{remark}[theorem]{Remark} % Remark environment
+% Title.
+% ------
+\title{Graph Sampling for Scalable and Expressive Graph Neural Networks on Homophilic Graphs}
+%
+% Single address.
+% ---------------
+\author{Haolin Li and Luana Ruiz\\
+Department of Applied Mathematics and Statistics, Johns Hopkins University, Baltimore, USA}
+% \address{Johns Hopkins University\\
+% 	Dept. of Applied Math and Statistics\\
+% 	Baltimore, MD 21218}
+% \name{Zhiyang Wang\thanks{Thanks to XYZ agency for funding.}}
+% \address{University of Pennsylvania\\
+% 	Dept. of Electrical and Systems Eng.\\
+% 	Philadelphia, PA 19104}
+% \name{Luana Ruiz\thanks{Thanks to XYZ agency for funding.}}
+% \address{Johns Hopkins University\\
+% 	Dept. of Applied Math and Statistics\\
+% 	Baltimore, MD 21218}
+%
+% For example:
+% ------------
+%\address{School\\
+%	Department\\
+%	Address}
+%
+% Two addresses (uncomment and modify for two-address case).
+% ----------------------------------------------------------
+% \twoauthors
+%  {Caio F. Deberaldini Netto, Luana Ruiz\sthanks{Thanks to XYZ agency for funding.}}
+% 	{Johns Hopkins University\\
+% 	Dept. of Applied Math and Statistics\\
+% 	Baltimore, MD 21218}
+%  {Zhiyang Wang\sthanks{The fourth author performed the work
+% 	while at ...}}
+% 	{University of Pennsylvania\\
+% 	Dept. of Electrical and Systems Eng.\\
+% 	Philadelphia, PA 19104}
+%  % {Luana Ruiz\sthanks{Thanks to XYZ agency for funding.}}
+% 	% {Johns Hopkins University\\
+% 	% Dept. of Applied Math and Statistics\\
+% % 	% Baltimore, MD 21218}
+\begin{document}
+%\ninept
+%
+\maketitle
+%
+\begin{abstract}
+Graph Neural Networks (GNNs) excel in many graph machine learning tasks but face challenges when scaling to large networks. GNN transferability allows training on smaller graphs and applying the model to larger ones, but existing methods often rely on random subsampling, leading to disconnected subgraphs and reduced model expressivity.
+We propose a novel graph sampling algorithm that leverages feature homophily to preserve graph structure. By minimizing the trace of the data correlation matrix, our method better preserves the graph Laplacian’s rank than random sampling while achieving lower complexity than spectral methods. Experiments on citation networks show improved performance in preserving graph rank and GNN transferability compared to random sampling.
+
+%Efficient training on large-scale graphs while retaining crucial information remains a challenge in graph signal processing. This paper attacks this problem from a feature-wise perspective. With the proposed trace-minimization heuristic, our method outputs an ordering of all the nodes in the graph. As a result, we only need an one-time computation to sample any given graph at any sample rate. In addition to the efficiency, GNNs attain better accuracy scores compared with random baselines as well. We also propose the definition of feature homophily and provide theoretical analysis on its relation to the trace of the Laplacian. This paper demonstrates the efficiency, effectiveness, and robustness of the proposed sampling method, and serves as a novel understanding between graph structure and node features. 
+\end{abstract}
+%
+\begin{IEEEkeywords}
+graph signal processing, graph sampling, graph neural networks, transferability, homophily
+\end{IEEEkeywords}
+%
+\input{Sections/introduction}
+
+
+\input{Sections/background}
+
+
+
+\input{Sections/method}
+\input{Sections/experiments}
+\input{Sections/discussions}
+
+\vfill\pagebreak
+
+% References should be produced using the bibtex program from suitable
+% BiBTeX files (here: strings, refs, manuals). The IEEEbib.bst bibliography
+% style file from IEEE produces unsorted bibliography list.
+% -------------------------------------------------------------------------
+\bibliographystyle{IEEEbib}
+\bibliography{myIEEEabrv,strings,refs,bib_cumulative}
+
+\appendix 
+\begin{proof}[Proof of Prop. II.2]
+  From the definition, we can rewrite 
+    $$\ccalY = \text{span}(\{S^kx : k=0, \ldots, K\})$$
+    Since $\mathbf{S}$ is symmetric, there exists some $\mathbf{E}, \mathbf{\Sigma} \in \mathbb{R}^{n \times n}$ satisfying $\mathbf{E}\mathbf{E}^T = \mathbf{I}_n$ and $\mathbf{\Sigma}$ diagonal, such that $\mathbf{S} = \mathbf{E}\mathbf{\Sigma}\mathbf{E}^T$. This implies a simple explicit representation for $\mathbf{S}^k = \mathbf{E}\mathbf{\Sigma}^k\mathbf{E}^T$. As a result, $\mathbf{S}^k$ share not only the same rank, also the same coordinates regardless scaling. So for any given $x\in \reals^n$, rank($\{S^kx : k=1, \ldots, K\}$) $\leq$ rank$(\mathbf{S}) = r$. Therefore, we have $dim(\ccalY) \leq r+1$ with $x$ as an additional coordinate candidate.
+\end{proof}
+
+\begin{proof}[Proof of Prop. III.2]
+By the definition of feature homophily, and using the Cauchy-Schwarz inequality, we write
+\begin{equation}
+    -h_{G} = tr(\bbL XX^T) = \langle \bbL, XX^T \rangle_F \leq \| \bbL \|_F^2 \cdot \|XX^T\|_F^2 \text{.}
+\end{equation}
+
+Now we rewrite it in terms of trace
+\begin{equation}
+    \| \bbL \|_F^2 \cdot \|XX^T\|_F^2 = tr(\bbL^2) tr((XX^T)^2) \text{.}
+\end{equation}
+
+Because both $\bbL^2$ and $(XX^T)^2$ are positive semi-definite, we have
+\begin{equation}
+    tr(\bbL^2) tr((XX^T)^2) \leq tr(\bbL)^2tr(XX^T)^2 \text{.}
+\end{equation}
+
+Finally, combining the above equations, we get the desired result
+    \begin{equation}
+        -h_G \leq \text{tr}(\bbL^2)\text{tr}((\hat{X}\hat{X}^T)^2) \leq \text{tr}(\bbL)^2\text{tr}(\hat{X}\hat{X}^T)^2 \text{.}
+    \end{equation}
+\end{proof}
+
+\begin{proof}[Proof of Prop. III.3]
+Algorithm \ref{alg:sampling} involves two main steps: computation of the homophily $tr(-\bbL XX^t)$, and of the node scores $\mbox{diag}(XX^T)$. Computation of $tr(-\bbL XX^t)$ has complexity $O(dm)$, as it is dominated by computing the matrix-matrix multiplication $\bbL X$ and the subsequent trace computation only requires $O(dn)$. Similarly, the computation of $\mbox{diag}(XX^T)$ requires $O(dn)$ as we only calculate the diagonal elements of $XX^T$.
+\end{proof}
+
+\end{document}
