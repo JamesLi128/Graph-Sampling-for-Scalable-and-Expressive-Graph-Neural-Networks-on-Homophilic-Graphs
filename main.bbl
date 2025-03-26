@@ -1,0 +1,137 @@
+\begin{thebibliography}{10}
+
+\bibitem{gori2005new}
+Marco Gori, Gabriele Monfardini, and Franco Scarselli,
+\newblock ``A new model for learning in graph domains,''
+\newblock in {\em Proceedings. 2005 IEEE international joint conference on neural networks, 2005.} IEEE, 2005, vol.~2, pp. 729--734.
+
+\bibitem{kipf17-classifgcnn}
+T.~N. Kipf and M.~Welling,
+\newblock ``Semi-supervised classification with graph convolutional networks,''
+\newblock in {\em 5th Int. Conf. Learning Representations}, Toulon, France, 24-26 Apr. 2017, Assoc. Comput. Linguistics.
+
+\bibitem{defferrard17-cnngraphs}
+M.~Defferrard, X.~Bresson, and P.~Vandergheynst,
+\newblock ``Convolutional neural networks on graphs with fast localized spectral filtering,''
+\newblock in {\em Neural Inform. Process. Syst.}, Barcelona, Spain, 5-10 Dec. 2016, NIPS Foundation.
+
+\bibitem{gama18-gnnarchit}
+F.~Gama, A.~G.~Marques, G.~Leus, and A.~Ribeiro,
+\newblock ``Convolutional neural network architectures for signals supported on graphs,''
+\newblock {\em {IEEE} Trans. Signal Process.}, vol. 67, pp. 1034--1049, 2018.
+
+\bibitem{ruiz2020gnns}
+L.~Ruiz, F.~Gama, and A.~Ribeiro,
+\newblock ``Graph neural networks: Architectures, stability and transferability,''
+\newblock {\em Proc. IEEE}, vol. 109, no. 5, pp. 660--682, 2021.
+
+\bibitem{hamilton2017inductive}
+Will Hamilton, Zhitao Ying, and Jure Leskovec,
+\newblock ``Inductive representation learning on large graphs,''
+\newblock {\em Advances in neural information processing systems}, vol. 30, 2017.
+
+\bibitem{ruiz19-inv}
+L.~Ruiz, F.~Gama, A.~G.~Marques, and A.~Ribeiro,
+\newblock ``Invariance-preserving localized activation functions for graph neural networks,''
+\newblock {\em {IEEE} Trans. Signal Process.}, vol. 68, pp. 127--141, 2020.
+
+\bibitem{gama19-stability}
+F.~Gama, J.~Bruna, and A.~Ribeiro,
+\newblock ``Stability properties of graph neural networks,''
+\newblock {\em {IEEE} Trans. Signal Process.}, vol. 68, pp. 5680--5695, 2020.
+
+\bibitem{ruiz20-transf}
+L.~Ruiz, L.~F.~O. Chamon, and A.~Ribeiro,
+\newblock ``Graphon neural networks and the transferability of graph neural networks,''
+\newblock in {\em 34th Neural Inform. Process. Syst.}, Vancouver, BC (Virtual), 6-12 Dec. 2020, NeurIPS Foundation.
+
+\bibitem{levie2019transferability}
+R.~Levie, W.~Huang, L.~Bucci, M.~Bronstein, and G.~Kutyniok,
+\newblock ``Transferability of spectral graph convolutional neural networks,''
+\newblock {\em J. Mach. Learning Res.}, vol. 22, no. 272, pp. 1--59, 2021.
+
+\bibitem{ruiz2020graphonsp}
+L.~Ruiz, L.~F.~O. Chamon, and A.~Ribeiro,
+\newblock ``Graphon signal processing,''
+\newblock {\em {IEEE} Trans. Signal Process.}, vol. 69, pp. 4961--4976, 2021.
+
+\bibitem{ruiz2024spectral}
+Luana Ruiz, Ningyuan~Teresa Huang, and Soledad Villar,
+\newblock ``A spectral analysis of graph neural networks on dense and sparse graphs,''
+\newblock in {\em ICASSP 2024-2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}. IEEE, 2024, pp. 9936--9940.
+
+\bibitem{chen2015discrete}
+S.~Chen, R.~Varma, A.~Sandryhaila, and J.~Kovacevic,
+\newblock ``Discrete signal processing on graphs: Sampling theory,''
+\newblock {\em {IEEE} Trans. Signal Process.}, vol. 63, pp. 6510--6523, 2015.
+
+\bibitem{anis2016efficient}
+Aamir Anis, Akshay Gadde, and Antonio Ortega,
+\newblock ``Efficient sampling set selection for bandlimited graph signals using graph spectral proxies,''
+\newblock {\em IEEE Transactions on Signal Processing}, vol. 64, no. 14, pp. 3775--3789, 2016.
+
+\bibitem{alimohammadi2023localgraphlimitsperspective}
+Yeganeh Alimohammadi, Luana Ruiz, and Amin Saberi,
+\newblock ``A local graph limits perspective on sampling-based gnns,'' 2023.
+
+\bibitem{shuman13-mag}
+D.~I Shuman, S.~K. Narang, P.~Frossard, A.~Ortega, and P.~Vandergheynst,
+\newblock ``The emerging field of signal processing on graphs: Extending high-dimensional data analysis to networks and other irregular domains,''
+\newblock {\em {IEEE} Signal Process. Mag.}, vol. 30, no. 3, pp. 83--98, May 2013.
+
+\bibitem{sandryhaila13-dspg}
+A.~Sandryhaila and J.~M.~F. Moura,
+\newblock ``Discrete signal processing on graphs,''
+\newblock {\em {IEEE} Trans. Signal Process.}, vol. 61, pp. 1644--1656, Apr. 2013.
+
+\bibitem{ortega2018graph}
+A.~Ortega, P.~Frossard, J.~Kova{\v{c}}evi{\'c}, J.~M.~F. Moura, and P.~Vandergheynst,
+\newblock ``Graph signal processing: Overview, challenges, and applications,''
+\newblock {\em Proc. IEEE}, vol. 106, no. 5, pp. 808--828, 2018.
+
+\bibitem{segarra17-linear}
+S.~Segarra, A.~G.~Marques, and A.~Ribeiro,
+\newblock ``Optimal graph-filter design and applications to distributed linear network operators,''
+\newblock {\em {IEEE} Trans. Signal Process.}, vol. 65, pp. 4117--4131, Aug. 2017.
+
+\bibitem{borgs2008convergent}
+C.~Borgs, J.~T. Chayes, L.~Lov{\'a}sz, V.~T. S{\'o}s, and K.~Vesztergombi,
+\newblock ``Convergent sequences of dense graphs i: Subgraph frequencies, metric properties and testing,''
+\newblock {\em Adv. Math.}, vol. 219, no. 6, pp. 1801--1851, 2008.
+
+\bibitem{lovasz2012large}
+L.~Lov{\'a}sz,
+\newblock {\em Large Networks and Graph Limits}, vol.~60,
+\newblock American Mathematical Society, 2012.
+
+\bibitem{ruiz2021transferability}
+L.~Ruiz, L.~F.~O. Chamon, and A.~Ribeiro,
+\newblock ``Transferability properties of graph neural networks,''
+\newblock {\em arXiv:2112.04629 [eess.SP]. Submitted to IEEE TSP}, 2021.
+
+\bibitem{xu2018how}
+K.~Xu, W.~Hu, J.~Leskovec, and S.~Jegelka,
+\newblock ``How powerful are graph neural networks?,''
+\newblock in {\em 7th Int. Conf. Learning Representations}, New Orleans, LA, 6-9 May 2019, pp. 1--17, Assoc. Comput. Linguistics.
+
+\bibitem{chen2019equivalence}
+Zhengdao Chen, Soledad Villar, Lei Chen, and Joan Bruna,
+\newblock ``On the equivalence between graph isomorphism testing and function approximation with gnns,''
+\newblock {\em Advances in neural information processing systems}, vol. 32, 2019.
+
+\bibitem{kalofolias2016learn}
+Vassilis Kalofolias,
+\newblock ``How to learn a graph from smooth signals,''
+\newblock in {\em Proceedings of the 19th International Conference on Artificial Intelligence and Statistics (AISTATS)}. PMLR, 2016, pp. 920--929.
+
+\bibitem{spielman2011graph}
+Daniel~A. Spielman and Nikhil Srivastava,
+\newblock ``Graph sparsification by effective resistances,''
+\newblock {\em SIAM Journal on Computing}, vol. 40, no. 6, pp. 1913--1926, 2011.
+
+\bibitem{kingma17-adam}
+D.~P. Kingma and J.~L. Ba,
+\newblock ``{ADAM}: A method for stochastic optimization,''
+\newblock in {\em 3rd Int. Conf. Learning Representations}, San Diego, CA, 7-9 May 2015, Assoc. Comput. Linguistics.
+
+\end{thebibliography}
